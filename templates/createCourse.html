@@ -1,0 +1,20 @@
+{% extends 'navbar.html' %}
+{% block content %}
+
+<head>
+    <style>
+        form{
+            border:1px solid black;
+            width:700px;
+            margin:auto;
+            padding: 40px;
+            background-color:cyan;
+        }
+    </style>
+</head>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success" value="submit">
+</form>
+{% endblock %}
